@@ -9,7 +9,8 @@ import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import axios from '../../axios-orders';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
-import * as actionTypes from '../../store/actions';
+import * as actionTypes from '../../store/actions/actionTypes';
+import * as actions from '../../store/actions/index';
 
 
 class BurgerBuilder extends Component {
@@ -90,15 +91,15 @@ class BurgerBuilder extends Component {
         this.props.history.push('/checkout');
     };
 
-    // componentDidMount() {
-    //     axios.get('/ingredients.json')
-    //         .then(response => {
-    //             this.setState({ingredients: response.data});
-    //         })
-    //         .catch(error => {
-    //             this.setState({ error: true });
-    //         });
-    // }
+    componentDidMount() {
+        axios.get('/ingredients.json')
+            .then(response => {
+                this.setState({ingredients: response.data});
+            })
+            .catch(error => {
+                this.setState({ error: true });
+            });
+    }
 
     render() {
         const disabledInfo = {
@@ -161,8 +162,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onIngredientAdded: (ingredientName) => dispatch({ type: actionTypes.ADD_INGREDIENT, ingredientName: ingredientName }),
-        onIngredientRemoved: (ingredientName) => dispatch({ type: actionTypes.REMOVE_INGREDIENT, ingredientName: ingredientName })
+        onIngredientAdded: (ingredientName) => dispatch(actions.addIngredient(ingredientName)),
+        onIngredientRemoved: (ingredientName) => dispatch(actions.removeIngredient(ingredientName))
     };
 };
 
