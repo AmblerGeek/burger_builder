@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="725708a8-2fe8-4f97-ba36-83d2aea36d09" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/store/utility.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BurgerBuilder/BurgerBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Checkout/Checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Checkout/ContactData/ContactData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Orders/Orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Orders/Orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/burgerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/burgerBuilder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
@@ -145,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567573630850</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lecture 339">
+      <created>1567657605141</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567657605141</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +174,8 @@
     <MESSAGE value="Sections 1 - 11" />
     <MESSAGE value="Sections 13" />
     <MESSAGE value="Sections 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sections 17" />
+    <MESSAGE value="Lecture 339" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lecture 339" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
