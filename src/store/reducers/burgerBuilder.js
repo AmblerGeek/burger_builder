@@ -4,7 +4,8 @@ import { updateObject } from "../utility";
 const initialState  = {
     ingredients: null,
     totalPrice: 4,
-    error: false
+    error: false,
+    openOrder: false
 };
 
 const INGREDIENT_PRICES = {
@@ -22,7 +23,8 @@ const addIngredient = (state, action) => {
     const updatedIngredients = updateObject(state.ingredients, updatedIngredient);
     const updatedState = {
         ingredients: updatedIngredients,
-        totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName]
+        totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName],
+        openOrder: true
     };
     return updateObject(state, updatedState);
 };
@@ -34,7 +36,8 @@ const removeIngredient = (state, action) => {
     const updatedIngredients = updateObject(state.ingredients, updatedIngredient);
     const updatedState = {
         ingredients: updatedIngredients,
-        totalPrice: state.totalPrice - INGREDIENT_PRICES[action.ingredientName]
+        totalPrice: state.totalPrice - INGREDIENT_PRICES[action.ingredientName],
+        openOrder: true
     };
     return updateObject(state, updatedState);
 };
@@ -47,7 +50,7 @@ const burgerBuilder = (state = initialState, action) => {
         case actionTypes.REMOVE_INGREDIENT:
             return removeIngredient(state, action);
         case actionTypes.SET_INGREDIENTS:
-            return updateObject(state, { ingredients: action.ingredients, totalPrice: 4, error: false });
+            return updateObject(state, { ingredients: action.ingredients, totalPrice: 4, error: false, openOrder: false });
         case actionTypes.FETCH_INGREDIENTS_FAILURE:
             return updateObject(state, { error: true });
         default:
