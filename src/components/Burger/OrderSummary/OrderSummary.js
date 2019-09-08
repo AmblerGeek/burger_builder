@@ -4,10 +4,6 @@ import Button from '../../UI/Button/Button';
 // import classes from './Modal.module.css';
 
 class OrderSummary extends Component {
-    // This could be a functional component
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log('[OrderSummary] DidUpdate');
-    }
 
     render() {
         const ingredientSummary = Object.keys(this.props.ingredients).map(ingredientKey => {

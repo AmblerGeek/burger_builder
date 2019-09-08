@@ -11,12 +11,13 @@ import './index.css';
 import orderReducer from './store/reducers/order';
 import burgerBuilderReducer from "./store/reducers/burgerBuilder";
 import authReducer from "./store/reducers/auth";
+import * as process from "eslint-config-react-app";
 
 // Basic Redux DevTools setup
 // const store = createStore(burgerBuilderReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 // Advanced Redux DevTools setup
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__: null || compose;
 
 const rootReducer = combineReducers({
     burgerBuilder: burgerBuilderReducer,
